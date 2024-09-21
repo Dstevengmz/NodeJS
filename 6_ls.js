@@ -1,15 +1,14 @@
-const fs=require('node:fs')
+const fs = require('node:fs')
 
 fs.stat('content')
 fs.readdir('.')
-.then(files=>{
+  .then(files => {
     files.forEach(file => {
-        console.log(file)
-    });
-})
-.catch(err=>{
-    if(err){
-        console.log("Error al leer el directorio")
-    return;
+      console.log(file)
+    })
+  })
+  .catch(err => {
+    if (err) {
+      console.log('Error al leer el directorio')
     }
-})
+  })
